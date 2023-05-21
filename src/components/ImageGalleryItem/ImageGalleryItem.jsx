@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Modal from 'components/Modal';
 import { GalleryItem, GalleryItemImg } from './ImageGalleryItem.styled';
 
-export default function ImageGalleryItem({ el }) {
+export default function ImageGalleryItem({ el: {webformatURL, tags, largeImageURL} }) {
   const [showModal, setShowModal] = useState(false);
 
   const toggleModal = () => {
@@ -14,7 +14,6 @@ export default function ImageGalleryItem({ el }) {
     toggleModal();
   };
 
-  const {webformatURL, tags, largeImageURL} = el;
   return (
     <>
       <GalleryItem>
